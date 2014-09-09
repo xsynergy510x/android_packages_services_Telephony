@@ -487,4 +487,11 @@
     <!-- Title displayed SIP account settings in the sip settings category. [CHAR LIMIT=NONE] -->
     <string name="sip_accounts_title_cm">SIP accounts</string>
 
+    <!-- Call Recording -->
+    <string name="allow_call_recording_title">Allow call recording</string>
+    <string name="allow_call_recording_summary">Show call recording button during a call</string>
+
+    <!-- Waiver -->
+    <string name="call_recording_waiver_title">Waiver</string>
+    <string name="call_recording_waiver_body">Changing this setting may be against your state or government laws.\n\nIn selecting \'OK\' below, you acknowledge this warning and waive, indemnify and hold harmless CyanogenMod and its contributors from all legal liabilities.</string>
 </resources>
