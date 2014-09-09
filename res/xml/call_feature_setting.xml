@@ -261,6 +261,12 @@
         android:summary="@string/noise_suppression_summary"
         android:defaultValue="1"/>
 
+    <CheckBoxPreference
+        android:key="button_allow_call_recording"
+        android:title="@string/allow_call_recording_title"
+        android:summary="@string/allow_call_recording_summary"
+        android:defaultValue="false" />
+
     <PreferenceScreen
         android:key="button_gsm_more_expand_key"
         android:title="@string/labelGSMMore"
