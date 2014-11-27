@@ -185,7 +185,8 @@ public class CallFeaturesSetting extends PreferenceActivity
     private static final String BUTTON_RINGTONE_KEY    = "button_ringtone_key";
     private static final String BUTTON_VIBRATE_ON_RING = "button_vibrate_on_ring";
     private static final String BUTTON_PLAY_DTMF_TONE  = "button_play_dtmf_tone";
-    private static final String PROX_AUTO_SPEAKER  = "prox_auto_speaker";
+    private static final String PROX_AUTO_SPEAKER  = "prox_auto_speaker"
+    private static final String PROX_AUTO_SPEAKER_INCALL_ONLY  = "prox_auto_speaker_incall_only";
     private static final String BUTTON_DTMF_KEY        = "button_dtmf_settings";
     private static final String BUTTON_RETRY_KEY       = "button_auto_retry_key";
 
@@ -343,6 +344,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     /** Whether dialpad plays DTMF tone or not. */
     private CheckBoxPreference mPlayDtmfTone;
     private CheckBoxPreference mProxSpeaker;
+    private CheckBoxPreference mProxSpeakerIncallOnly;
     private CheckBoxPreference mButtonAutoRetry;
     private CheckBoxPreference mButtonHAC;
     private ListPreference mButtonDTMF;
@@ -603,6 +605,11 @@ public class CallFeaturesSetting extends PreferenceActivity
         } else if (preference == mProxSpeaker) {    
             Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_AUTO_SPEAKER,    
                     mProxSpeaker.isChecked() ? 1 : 0);
+            mProxSpeakerIncallOnly.setEnabled(mProxSpeaker.isChecked());   
+        } else if (preference == mProxSpeakerIncallOnly) {  
+            Settings.System.putInt(getContentResolver(),    
+                    Settings.System.PROXIMITY_AUTO_SPEAKER_INCALL_ONLY, 
+                    mProxSpeakerIncallOnly.isChecked() ? 1 : 0);
         } else if (preference == mMwiNotification) {
             int mwiNotification = mMwiNotification.isChecked() ? 1 : 0;
             Settings.System.putInt(mPhone.getContext().getContentResolver(),
