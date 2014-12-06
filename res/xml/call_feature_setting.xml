@@ -239,7 +239,8 @@
       android:title="@string/prox_auto_speaker_incall_only_title" 
       android:summary="@string/prox_auto_speaker_incall_only_summary" 
       android:persistent="false" 
-      android:defaultValue="false" />
+      android:defaultValue="false" 
+      android:dependency="prox_auto_speaker"  />
 
   <CheckBoxPreference
       android:key="button_play_dtmf_tone"
